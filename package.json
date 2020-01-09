@@ -1,0 +1,15 @@
+{
+  "name": "crm-be",
+  "version": "1.0.0",
+  "description": "Backend part of CRM APP",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hasan": "nodemon app.js"
+  },
+  "author": "Hasan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
