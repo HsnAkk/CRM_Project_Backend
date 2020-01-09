@@ -1,9 +1,24 @@
 const express = require('express');
+const config = require('config');
+const mongoose = require('mongoose');
+
 
 const app = express();
 
 // BodyParser Middleware
 app.use(express.json());
+
+// DB Config
+const db = config.get('mongoURI');
+
+// connect to Mongo
+mongoose.connect(db, {
+                        useNewUrlParser: true,
+                        useCreateIndex: true,
+                        useUnifiedTopology: true
+                    })
+                    .then( () => console.log('MongoDB connected...'))
+                    .catch( err => console.log(err));
 
 
 app.get('/', (req, res) => {
